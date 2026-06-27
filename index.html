@@ -189,8 +189,7 @@
 
   function showToast(t){var el=document.getElementById('toast');el.textContent=t;el.classList.add('show');setTimeout(function(){el.classList.remove('show');},1800);}
 
-  var SCRIPT_URL=""; // ВСТАВЬТЕ СЮДА адрес веб-приложения Google Apps Script (заканчивается на /exec)
-  document.getElementById('send').onclick=function(){
+  var SCRIPT_URL="https://script.google.com/macros/s/AKfycbw1lrDq2TkZOKqMWeTUKcswg380r3q7KvOd2rOksuW22uhBDgBlAfHX1ofS2FN-YRaI/exec";
     if(!SCRIPT_URL){showToast('Не задан адрес таблицы');return;}
     var g=function(id){return (document.getElementById(id).value||'').trim();};
     var payload={name:g('name'),a1:g('a1'),a2a:g('a2a'),a2b:g('a2b'),a3:g('a3')};
